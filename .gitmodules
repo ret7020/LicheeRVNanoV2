@@ -1,0 +1,8 @@
+[submodule "sdk/cvi_rtsp"]
+	path = sdk/cvi_rtsp
+	url = https://github.com/scpcom/cvi_rtsp
+	branch = licheervnano-cvisdk
+
+[submodule "sdk/middleware"]
+	path = sdk/middleware
+	url = https://github.com/scpcom/sophgo-middleware
