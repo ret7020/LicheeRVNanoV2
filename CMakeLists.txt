@@ -5,8 +5,8 @@ set(CMAKE_CXX_STANDARD 11)
 
 SET(CMAKE_C_COMPILER "$ENV{COMPILER}/riscv64-unknown-linux-musl-gcc")
 SET(CMAKE_CXX_COMPILER "$ENV{COMPILER}/riscv64-unknown-linux-musl-g++")
-set(CMAKE_C_FLAGS "-D__CV181X__ -O3")
-set(CMAKE_CXX_FLAGS "-D__CV181X__ -O3")
+set(CMAKE_C_FLAGS "-D__CV181X__ -O3 -march=rv64imafd -O3 -DSENSOR_GCORE_GC4653 -D_MIDDLEWARE_V2_ -DC906 -DUSE_TPU_IVE -fsigned-char -Wno-format-truncation -fdiagnostics-color=always -s")
+set(CMAKE_CXX_FLAGS "-D__CV181X__ -O3 -march=rv64imafd -O3 -DSENSOR_GCORE_GC4653 -D_MIDDLEWARE_V2_ -DC906 -DUSE_TPU_IVE -fsigned-char -Wno-format-truncation -fdiagnostics-color=always -s")
 
 
 include_directories(
@@ -19,11 +19,12 @@ include_directories(
     sdk/middleware/v2/sample/common
     sdk/middleware/v2/include
     sdk/middleware/v2/modules/isp/include/cv181x/
+    sdk/middleware/modules/ive/include
+    sdk/middleware/3rdparty/
     sdk/osdrv/interdrv/v2/include/chip/cv181x/uapi
     sdk/osdrv/interdrv/v2/include/common/uapi
     sdk/cvi_rtsp/include/cvi_rtsp
-    sdk/middleware/modules/ive/include
-    sdk/middleware/3rdparty/
+    
 )
 
 
