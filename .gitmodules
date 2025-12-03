@@ -5,9 +5,12 @@
 [submodule "sdk/middleware"]
 	path = sdk/middleware
 	url = https://github.com/scpcom/sophgo-middleware
+	branch = licheervnano-cvisdk
 [submodule "sdk/osdrv"]
 	path = sdk/osdrv
 	url = https://github.com/scpcom/sophgo-osdrv
+	branch = licheervnano-cvisdk
 [submodule "sdk/tdl_sdk"]
 	path = sdk/tdl_sdk
 	url = https://github.com/scpcom/sophgo-tdl_sdk
+	branch = licheervnano-cvisdk
