@@ -54,9 +54,8 @@ void *run_venc(void *args) {
                    sizeof(stObjMeta.info[oid].name));
         }
 
-        cvtdl_service_brush_t *brushes = NULL;
+        cvtdl_service_brush_t *brushes = new cvtdl_service_brush_t[stObjMeta.size];
         if (stObjMeta.size > 0) {
-            brushes = malloc(stObjMeta.size * sizeof(*brushes));
             if (!brushes) {
                 printf("Failed to allocate brushes\n");
                 CVI_TDL_Free(&stObjMeta);
@@ -80,7 +79,7 @@ void *run_venc(void *args) {
         CVI_S32 s32DrawRet = CVI_TDL_Service_ObjectDrawRect2(
             pstArgs->stServiceHandle, &stObjMeta, &stFrame, true, brushes);
 
-        free(brushes);
+        delete[] brushes;
 
         CVI_S32 s32SendRet = CVI_SUCCESS;
         if (s32DrawRet == CVI_TDL_SUCCESS) {

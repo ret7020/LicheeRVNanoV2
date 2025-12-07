@@ -31,8 +31,8 @@ int main(int argc, char *argv[]) {
         {128, 200, 0}
     };
 
-    SAMPLE_TDL_MW_CONFIG_S stMWConfig = {0};
-    SAMPLE_TDL_MW_CONTEXT stMWContext = {0};
+    SAMPLE_TDL_MW_CONFIG_S stMWConfig = {};
+    SAMPLE_TDL_MW_CONTEXT stMWContext = {};
     cvitdl_handle_t stTDLHandle = NULL;
     cvitdl_service_handle_t stServiceHandle = NULL;
 

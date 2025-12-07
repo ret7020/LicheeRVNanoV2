@@ -42,9 +42,9 @@ include_directories(
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 file(MAKE_DIRECTORY ${EXECUTABLE_OUTPUT_PATH})
 
-add_executable(app projects/StreamYolo/src/main.c 
-                    projects/StreamYolo/src/mw_setup.c
-                    projects/StreamYolo/src/threads.c
+add_executable(app projects/StreamYolo/src/main.cpp
+                    projects/StreamYolo/src/mw_setup.cpp
+                    projects/StreamYolo/src/threads.cpp
                     sdk/tdl_sdk/sample/middleware_utils.c)
 
 target_link_directories(app PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/sdk/prebuilt/lib)
