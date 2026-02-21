@@ -2,11 +2,10 @@ cmake_minimum_required(VERSION 3.15)
 project(apps)
 set(CMAKE_CXX_STANDARD 17)
 
-# toolchain – keep as is
 set(CMAKE_C_COMPILER "$ENV{COMPILER}/riscv64-unknown-linux-musl-gcc")
 set(CMAKE_CXX_COMPILER "$ENV{COMPILER}/riscv64-unknown-linux-musl-g++")
 
-set(CVI_SDK_ROOT "sdk")
+set(CVI_SDK_ROOT "/home/stephan/Progs/_LicheeRVNanoV2/sdk")
 set(CVI_TDL_SDK_DIR      "${CVI_SDK_ROOT}/tdl_sdk")
 set(CVI_MW_DIR           "${CVI_SDK_ROOT}/middleware")
 set(CVI_OSDRV_DIR        "${CVI_SDK_ROOT}/osdrv")
@@ -14,7 +13,6 @@ set(CVI_OSDRV_DIR        "${CVI_SDK_ROOT}/osdrv")
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 file(MAKE_DIRECTORY ${EXECUTABLE_OUTPUT_PATH})
 
-# Common interface target
 add_library(common_settings INTERFACE)
 
 target_compile_options(common_settings INTERFACE
